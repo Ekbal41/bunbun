@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "lib": [
+            "ESNext"
+        ],
+        "module": "esnext",
+        "target": "esnext",
+        "moduleResolution": "node",
+        "noEmitOnError": true,
+        "noImplicitReturns": true,
+        "outDir": "dist",
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "types": [
+            "bun-types"
+        ],
+        "allowSyntheticDefaultImports": true,
+    },
+    "include": [
+        "lib/**/*.ts"
+    ]
+}

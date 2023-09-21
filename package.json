@@ -1,0 +1,28 @@
+{
+  "name": "bunbunjs",
+  "version": "0.0.6",
+  "author": "Asif Ekbal",
+  "keywords": [
+    "bunbunjs",
+    "bun",
+    "web",
+    "framework",
+    "http",
+    "middleware",
+    "websocket"
+  ],
+  "main": "./dist/index.js",
+  "description": "A fast, minimalist web framework for the Bun.js runtime",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "rm -rf dist/ && tsc"
+  },
+  "dependencies": {
+    "bun-types": "^1.0.2",
+    "path-to-regexp": "^6.2.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
