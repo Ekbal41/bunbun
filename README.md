@@ -26,14 +26,12 @@ To install Bunbun.js, in your project directory, run `bun add bunbunjs`
 import Bunbun from "bunbunjs";
 
 const app = new Bunbun();
-```
 
-```typescript
 app.get("/", (c) => {
   return c.text("Hello World");
 });
 
-app.listen();
+const server = app.listen();
 console.log(`Server listening on ${server.hostname}:${server.port}`);
 ```
 
@@ -45,7 +43,7 @@ console.log(`Server listening on ${server.hostname}:${server.port}`);
 // index.ts
 app.get("/user/:user", (c) => {
   const user = await getUser(c.params.user);
-  return ctx.json(user);
+  return c.json(user);
 });
 ```
 
@@ -58,21 +56,22 @@ import Bunbun from "bunbunjs";
 const app = new Bunbun();
 
 // Runs before the every routes
-app.use((ctx) => {
+app.use((c) => {
   //do something
-  return ctx;
+  return c;
 });
 
 // for single route
-
-const auth = (ctx) => {
+const auth = (c) => {
   // check if user is authenticated
-  return ctx;
+  return c;
 };
 
-app.get("/", auth, (ctx) => {
-  return ctx.text("Authenticated");
+app.get("/", auth, (c) => {
+  return c.text("Authenticated");
 });
+
+app.listen();
 ```
 
 ## License
